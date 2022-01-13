@@ -3,7 +3,7 @@ const User = (props) => {
 
     return (
         <div>
-            <div>id: {id}</div>
+            <div><b>id: {id}</b></div>
             <div>name: {name}</div>
             <div>username: {username}</div>
             <div>email: {email}</div>

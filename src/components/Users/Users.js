@@ -13,6 +13,7 @@ const Users = () => {
 
     return (
         <div>
+            <h3>Users</h3>
             {users.map(value => <User key={value.id} id={value.id} name={value.name} username={value.username}
                                       email={value.email} street={value.address.street}/>)}
         </div>
