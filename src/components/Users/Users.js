@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+
 import User from "../User/User";
 
 const Users = () => {
@@ -12,8 +13,8 @@ const Users = () => {
 
     return (
         <div>
-            {users.map(value => <User key={value.id} id={value.id} name={value.name} surname={value.surname} email={value.email} street={value.address.street} />)}
-            {users.name}
+            {users.map(value => <User key={value.id} id={value.id} name={value.name} username={value.username}
+                                      email={value.email} street={value.address.street}/>)}
         </div>
     );
 };
