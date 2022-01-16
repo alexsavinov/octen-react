@@ -7,10 +7,10 @@ function App() {
     return (
         <div className="App">
             <div className="top">
-                <div className="users"><Users/></div>
-                <div className="posts"><Posts/></div>
+                <Users/>
+                <Posts/>
             </div>
-            <div className="comments"><Comments/></div>
+            <Comments/>
         </div>
     );
 }

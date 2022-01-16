@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 
 import Comment from "../Comment/Comment";
+import "./Comments.css";
 
 const Comments = () => {
     const [comments, setComments] = useState([]);
@@ -12,7 +13,7 @@ const Comments = () => {
     }, [])
 
     return (
-        <div>
+        <div className="comments">
             <h3>Comments</h3>
             {comments.map(value => <Comment
                 key={value.id}

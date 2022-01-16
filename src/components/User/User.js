@@ -8,6 +8,7 @@ const User = (props) => {
             <div>username: {username}</div>
             <div>email: {email}</div>
             <div>street: {street}</div>
+            <hr/>
         </div>
     );
 };

@@ -3,20 +3,20 @@
     column-gap: 10px;
 }
 
-.users {
-    flex-grow: 1;
-}
+/*.users {*/
+/*    flex-grow: 1;*/
+/*}*/
 
-.posts {
-    flex-grow: 1;
-}
+/*.posts {*/
+/*    flex-grow: 1;*/
+/*}*/
 
-.comments {
-    margin-top: 10px;
-}
+/*.comments {*/
+/*    margin-top: 10px;*/
+/*}*/
 
-div > .users, .posts, .comments {
-    background: #dddddd;
-    border-radius: 5px;
-    padding: 10px;
-}
+/*div > .users, .posts, .comments {*/
+/*    background: #dddddd;*/
+/*    border-radius: 5px;*/
+/*    padding: 10px;*/
+/*}*/

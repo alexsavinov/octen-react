@@ -7,6 +7,7 @@ const Post = (props) => {
             <div>userId: {userId}</div>
             <div>title: {title}</div>
             <div>body: {body}</div>
+            <hr/>
         </div>
     );
 };

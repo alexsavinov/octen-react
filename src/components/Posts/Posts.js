@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 
 import Post from "../Post/Post";
+import './Posts.css';
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
@@ -12,7 +13,7 @@ const Posts = () => {
     }, [])
 
     return (
-        <div>
+        <div className="posts">
             <h3>Posts</h3>
             {posts.map(value => <Post
                 key={value.id}
