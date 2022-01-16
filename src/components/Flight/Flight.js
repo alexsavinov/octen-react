@@ -1,23 +1,20 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
-const Flight = () => {
+import "./Flight.css";
 
-    const [Flights, setFlights] = useState([]);
 
-    useEffect(() => {
-        fetch('https://api.spacexdata.com/v3/launches/')
-            .then(value => value.json())
-            // .then(value => setUsers(value))
-            .then(value => setUsers(value.filter(val => val.launch_year != '2020')));
-    }, [])
+const Flight = (props) => {
+    const {launch_year, mission_name, mission_patch_small} = props;
 
     return (
-        <div className="users">
-            <h3>Users</h3>
-            {users.map(value =>
-                <div>key={value.flight_number} flight_number={value.flight_number} launch_year={value.launch_year}</div>)}
-            {/*{users.map(value => <User key={value.id} id={value.id} name={value.name} username={value.username}*/}
-            {/*                          email={value.email} street={value.address.street}/>)}*/}
+        <div className="flight">
+            <div width="150">
+                <h3>{mission_name}</h3>
+                <h5>{launch_year}</h5>
+            </div>
+            <div>
+                <img src={mission_patch_small} alt="mission_patch_small" width="150"/>
+            </div>
         </div>
     );
 };

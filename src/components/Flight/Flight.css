@@ -1,0 +1,10 @@
+.flight {
+    background-color: azure;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3px;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
