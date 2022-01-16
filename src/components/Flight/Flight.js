@@ -1,21 +1,8 @@
-import './App.css';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from 'react';
 
-// есть API от SpaceX
-// https://api.spacexdata.com/v3/launches/
-// нужно вывести все запуски кораблей кроме 2020 года.
-// информация нужна не вся, только mission_name, launch_year  и mission_patch_small:
-function App() {
-    return (
-        <div className="App">
-            <Users/>
+const Flight = () => {
 
-        </div>
-    );
-}
-
-const Users = () => {
-    const [users, setUsers] = useState([]);
+    const [Flights, setFlights] = useState([]);
 
     useEffect(() => {
         fetch('https://api.spacexdata.com/v3/launches/')
@@ -35,4 +22,4 @@ const Users = () => {
     );
 };
 
-export default App;
+export default Flight;
