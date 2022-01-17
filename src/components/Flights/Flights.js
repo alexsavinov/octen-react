@@ -16,9 +16,10 @@ const Flights = () => {
         <div className="flights">
             <h2>Flights</h2>
             {flights.map(value => <Flight key={value.flight_number}
-                                          launch_year={value.launch_year}
-                                          mission_name={value.mission_name}
-                                          mission_patch_small={value.links.mission_patch_small}
+                                          item={value}
+                                          // launch_year={value.launch_year}
+                                          // mission_name={value.mission_name}
+                                          // mission_patch_small={value.links.mission_patch_small}
             />)}
         </div>
     );

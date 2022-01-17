@@ -3,8 +3,9 @@ import React from 'react';
 import "./Flight.css";
 
 
-const Flight = (props) => {
-    const {launch_year, mission_name, mission_patch_small} = props;
+// const Flight = (props) => {
+//     const {launch_year, mission_name, mission_patch_small} = props;
+const Flight = ({item: {launch_year, mission_name, links: {mission_patch_small}}}) => {
 
     return (
         <div className="flight">
