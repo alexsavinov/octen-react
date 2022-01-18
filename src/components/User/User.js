@@ -1,14 +1,10 @@
 const User = (props) => {
-    const {id, name, username, email, street} = props;
+    // const {id, name, username, email, street} = props;
+    const {id, name} = props;
 
     return (
         <div>
-            <div><b>id: {id}</b></div>
-            <div>name: {name}</div>
-            <div>username: {username}</div>
-            <div>email: {email}</div>
-            <div>street: {street}</div>
-            <hr/>
+            {id}) {name} <button>Get details</button>
         </div>
     );
 };

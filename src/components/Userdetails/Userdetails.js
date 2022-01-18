@@ -1,9 +1,12 @@
 import React from 'react';
 
+import "./Userdetails.css";
+
+
 const Userdetails = () => {
     return (
-        <div>
-            
+        <div className="userdetails">
+            {/*<Userdetails/>*/}
         </div>
     );
 };
