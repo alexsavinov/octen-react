@@ -1,10 +1,9 @@
-const User = (props) => {
-    // const {id, name, username, email, street} = props;
-    const {id, name} = props;
+const User = ({user, getUser}) => {
+    const {id, name} = user;
 
     return (
         <div>
-            {id}) {name} <button>Get details</button>
+            {id}) {name} <button onClick={() => getUser(user)}>Get details</button>
         </div>
     );
 };
