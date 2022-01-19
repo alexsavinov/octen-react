@@ -3,7 +3,7 @@ import {useState} from "react";
 import './App.css';
 import Users from "./components/Users/Users";
 import Posts from "./components/Posts/Posts";
-import UserDetails from "./components/Userdetails/UserDetails";
+import UserDetails from "./components/UserDetails/UserDetails";
 import {postService} from "./services/post.service";
 
 
