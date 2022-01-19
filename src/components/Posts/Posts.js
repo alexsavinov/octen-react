@@ -1,18 +1,7 @@
-import {useEffect, useState} from "react";
-
-import Post from "../Post/Post";
 import './Posts.css';
-
+import Post from "../Post/Post";
 
 const Posts = ({posts}) => {
-    // const [posts, setPosts] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('https://jsonplaceholder.typicode.com/posts')
-    //         .then(value => value.json())
-    //         .then(value => setPosts(value))
-    // }, [])
-
     return (
         <div className="posts">
             <h3>Posts</h3>

@@ -2,7 +2,6 @@ import React from 'react';
 
 import "./UserDetails.css";
 
-
 const UserDetails = ({user, getUserId}) => {
     const {id, name, username, email, address} = user;
 

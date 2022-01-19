@@ -1,6 +1,5 @@
 import {urls} from "../configs/urls";
 
-
 const getByUserId = (id) => {
     return fetch(`${urls.users}/${id}/posts`)
         .then(value => value.json())
@@ -9,4 +8,3 @@ const getByUserId = (id) => {
 export const postService = {
     getByUserId
 }
-

@@ -1,6 +1,5 @@
 import {urls} from "../configs/urls";
 
-
 const getAll = () => {
   return fetch(urls.users)
       .then(value => value.json())
@@ -9,4 +8,3 @@ const getAll = () => {
 export const userService = {
     getAll
 }
-
