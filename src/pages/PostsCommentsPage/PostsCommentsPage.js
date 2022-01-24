@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PostsCommentsPage = () => {
     return (
         <div>
@@ -8,4 +6,4 @@ const PostsCommentsPage = () => {
     );
 };
 
-export default PostsCommentsPage;
+export {PostsCommentsPage};
