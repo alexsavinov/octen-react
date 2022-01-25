@@ -1,0 +1,29 @@
+.wrap {
+    display: flex;
+    margin-top: 20px;
+}
+
+.left, .right {
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.left {
+    border-radius: 5px;
+}
+
+h3 {
+    background-color: #000066;
+    padding: 15px 10px 15px;
+    border-radius: 5px;
+    color: snow;
+}
+
+button {
+    min-width: 120px;
+    min-height: 22px;
+}

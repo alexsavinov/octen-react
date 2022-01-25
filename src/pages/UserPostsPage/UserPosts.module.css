@@ -1,0 +1,19 @@
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    margin: 5px 0px 25px;
+    padding: 5px;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.header {
+    margin-top: 25px;
+}

@@ -1,0 +1,17 @@
+.wrap {
+    display: flex;
+    margin-top: 20px;
+}
+
+.left, .right {
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.left {
+    border-radius: 5px;
+}
