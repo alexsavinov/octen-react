@@ -1,0 +1,28 @@
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    margin: 5px 0px 25px;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+}
+
+.bodyEmail {
+    font-weight: bold;
+    background-color: lightsteelblue;
+    padding: 5px;
+}
+
+.bodyBody {
+    padding: 5px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.header {
+    margin-top: 25px;
+}

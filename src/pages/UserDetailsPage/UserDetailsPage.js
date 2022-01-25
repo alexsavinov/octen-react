@@ -1,23 +1,13 @@
-import {Link, Outlet, useLocation, useParams} from 'react-router-dom';
-import {useEffect} from "react";
+import {Link, Outlet, useLocation} from 'react-router-dom';
 
 import css from './UserDetails.module.css';
 
 const UserDetailsPage = () => {
-    // const {}
-    // const {id} = useParams();
     const {state: user} = useLocation();
     const {id, name, username, email, address, phone, website, company} = user;
 
-    // console.log('const {id} = useParams();', id);
-    // console.log('const {state:user} = useLocation();', user);
-
-    useEffect(() => {
-
-    }, [id]);
-
     return (
-        <div className={css.userdetails}>
+        <div>
             <h3>User details</h3>
             <div>id: {id}</div>
             <div>name: {name}</div>
@@ -29,7 +19,7 @@ const UserDetailsPage = () => {
                 <div>suite: {address.suite}</div>
                 <div>city: {address.city}</div>
                 <div>zipcode: {address.zipcode}</div>
-                <div>geo: {address.geo.lat}. {address.geo.lng}</div>
+                <div>geo: {address.geo.lat}, {address.geo.lng}</div>
             </div>
             <div>phone: {phone}</div>
             <div>website: {website}</div>
@@ -40,7 +30,10 @@ const UserDetailsPage = () => {
                 <div>bs: {company.bs}</div>
             </div>
 
-            <Link to={'posts'} state={{...user}}>Posts</Link>
+            <Link to={'posts'} state={{...user}}>
+                <button>Posts</button>
+            </Link>
+
             <Outlet/>
         </div>
     );

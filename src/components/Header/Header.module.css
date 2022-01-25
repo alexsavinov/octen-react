@@ -1,10 +1,13 @@
 .header {
     min-height: 50px;
-    background-color: cornflowerblue;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .header a {
@@ -15,5 +18,5 @@
 
 .header a[class='active'] {
     text-decoration: underline;
-    color: blue;
+    color: snow;
 }

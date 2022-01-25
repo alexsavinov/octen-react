@@ -1,23 +1,22 @@
 import {Link} from "react-router-dom";
 
+import css from "./Post.module.css";
+
 const Post = ({post}) => {
     const {id, title} = post;
-    // {
-    // "userId": 10,
-    // "id": 92,
-    // "title": "ratione ex tenetur perferendis",
-    // "body": "aut et excepturi dicta laudantium sint rerum nihil\nlaudantium et at\na neque minima officia et similique libero et\ncommodi voluptate qui"
-    // }
+
     return (
-        <div>
-            <Link to={id.toString()} state={post}>
+        <div className={css.post}>
+            <div>
                 [{id}] {title}
+            </div>
+            <div>
                 <Link to={id.toString()} state={post}>
-                    <button>PostDetails</button>
+                    <button>Details</button>
                 </Link>
-            </Link>
+            </div>
         </div>
     );
 };
 
-export default Post;
+export {Post};
