@@ -1,0 +1,9 @@
+.photo {
+    border: 1px solid grey;
+    margin-top: 10px;
+    background-color: lightslategray;
+}
+
+img {
+    width: 300px;
+}
