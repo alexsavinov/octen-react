@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Outlet} from 'react-router-dom';
 
-import css from './PostsPage.module.css';
+import css from './Posts.module.css';
 
 import {Post} from '../../components';
 import {postService} from "../../services/post.service";
@@ -10,7 +10,7 @@ const PostsPage = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        postService.getAll().then(value => setPosts(value))
+        postService.getAll().then(value => setPosts([...value]))
     }, []);
 
     return (

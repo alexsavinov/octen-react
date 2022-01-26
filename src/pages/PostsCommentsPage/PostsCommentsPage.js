@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useLocation} from "react-router-dom";
 
-import css from "./PostComments.module.css";
+import css from "./PostsComments.module.css";
 
 import {commentService} from "../../services/comment.service";
 
