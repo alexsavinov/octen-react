@@ -13,7 +13,7 @@ const User = ({user}) => {
                 <Link to={id.toString()} state={{...user}}>
                     <button>Details</button>
                 </Link>
-                <Link to={id.toString() + '/albums'} state={{...user}}>
+                <Link to={id.toString() + "/albums"} state={{...user}}>
                     <button>Albums</button>
                 </Link>
             </div>

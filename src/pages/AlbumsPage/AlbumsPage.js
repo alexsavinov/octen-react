@@ -22,7 +22,7 @@ const AlbumsPage = () => {
                         <div>
                             [{album.id}] {album.title}
                         </div>
-                        <Link to={album.id + '/photos'}>
+                        <Link to={album.id + "/photos"}>
                             <button>Photos</button>
                         </Link>
                     </div>

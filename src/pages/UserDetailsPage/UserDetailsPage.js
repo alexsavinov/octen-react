@@ -30,7 +30,7 @@ const UserDetailsPage = () => {
                 <div>bs: {company.bs}</div>
             </div>
 
-            <Link to={'posts'} state={{...user}}>
+            <Link to={"posts"} state={{...user}}>
                 <button>Posts</button>
             </Link>
 

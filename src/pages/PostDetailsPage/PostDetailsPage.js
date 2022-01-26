@@ -17,7 +17,7 @@ const PostDetailsPage = () => {
                     {body}
                 </div>
                 <div>
-                    <Link to={'comments'} state={{...post}}>
+                    <Link to={"comments"} state={{...post}}>
                         <button>Comments</button>
                     </Link>
                 </div>
