@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
-import {Link, Outlet, useParams} from 'react-router-dom';
+import {Link, Outlet, useParams} from "react-router-dom";
 
-import css from './Albums.module.css';
+import css from "./Albums.module.css";
 
 import {albumsService} from "../../services/albums.service";
 

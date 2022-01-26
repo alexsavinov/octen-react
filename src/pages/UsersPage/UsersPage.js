@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-import {Outlet} from 'react-router-dom';
+import {Outlet} from "react-router-dom";
 
-import css from './UsersPage.module.css';
+import css from "./UsersPage.module.css";
 
-import {User} from '../../components';
+import {User} from "../../components";
 import {userService} from "../../services/user.service";
 
 const UsersPage = () => {

@@ -1,6 +1,6 @@
-import {Link, Outlet, useLocation} from 'react-router-dom';
+import {Link, Outlet, useLocation} from "react-router-dom";
 
-import css from './UserDetails.module.css';
+import css from "./UserDetails.module.css";
 
 const UserDetailsPage = () => {
     const {state: user} = useLocation();

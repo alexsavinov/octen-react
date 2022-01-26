@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-import {Outlet} from 'react-router-dom';
+import {Outlet} from "react-router-dom";
 
-import css from './Posts.module.css';
+import css from "./Posts.module.css";
 
-import {Post} from '../../components';
+import {Post} from "../../components";
 import {postService} from "../../services/post.service";
 
 const PostsPage = () => {
