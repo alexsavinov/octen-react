@@ -11,7 +11,7 @@ const Post = ({post}) => {
                 [{id}] {title}
             </div>
             <div>
-                <Link to={id.toString()} state={post}>
+                <Link to={id.toString()} state={{...post}}>
                     <button>Details</button>
                 </Link>
             </div>

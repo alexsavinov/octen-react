@@ -10,7 +10,7 @@ const User = ({user}) => {
                 [{id}] {name}
             </div>
             <div>
-                <Link to={id.toString()} state={user}>
+                <Link to={id.toString()} state={{...user}}>
                     <button>Details</button>
                 </Link>
             </div>
