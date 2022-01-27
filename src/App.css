@@ -1,0 +1,15 @@
+.wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.counter {
+    background-color: lightsteelblue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 2px;
+}
