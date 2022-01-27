@@ -1,0 +1,48 @@
+body {
+    background-color: darkgray;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: snow;
+    border-bottom: 2px solid grey;
+    padding: 1px;
+    font-family: "Arial Black";
+    font-size: 13px;
+}
+
+.counters {
+    display: flex;
+    margin: 25px;
+    gap: 5px;
+}
+
+.counter {
+    background-color: snow;
+    border-radius: 5px;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 2px;
+}
+
+.name {
+    font-weight: bolder;
+}
+
+.value {
+    font-size: 30px;
+}
