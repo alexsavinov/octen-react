@@ -1,0 +1,33 @@
+body {
+    background-color: darkgray;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form {
+    padding: 10px;
+    background-color: snow;
+    border-radius: 5px;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    display: flex;
+    gap: 5px;
+}
+
+.or {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.animals {
+    display: flex;
+    margin: 25px;
+    gap: 5px;
+}
