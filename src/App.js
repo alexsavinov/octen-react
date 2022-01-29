@@ -1,10 +1,13 @@
-import './App.css';
+import {Cars, Form} from "./components";
 
-function App() {
+const App = () => {
+
     return (
-        <div className="App">
+        <div>
+            <Form/>
+            <Cars/>
         </div>
     );
-}
+};
 
 export default App;
