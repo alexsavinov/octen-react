@@ -10,10 +10,10 @@ const Cars = () => {
 
     useEffect(() => {
         dispatch(getAllCars())
-    }, [])
+    }, []);
 
     return (
-        <div style={{margin: '50px'}}>
+        <div style={{margin: '50px'}}> 
             {status==='loading' && <h1>Loading...</h1>}
             {error&&<h1>{error}</h1>}
             {cars.map(car => <Car key={car.id} car={car}/>)}

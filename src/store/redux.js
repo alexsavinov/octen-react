@@ -4,7 +4,8 @@ import carReducer from "./car.slice";
 
 const store = configureStore({
     reducer:{
-        carReducer
+        carReducer,
+        // TODO: add slices for Users, Posts, Comments
     }
 })
 
