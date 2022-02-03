@@ -1,0 +1,45 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.comments {
+    background-color: snow;
+    margin: 60px 10px 10px 10px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid darkgray;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.body {
+    margin: 5px 0px 5px;
+    background-color: snow;
+}
+
+.bodyEmail {
+    font-weight: bold;
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.bodyBody {
+    padding: 5px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.header {
+    margin: 30px 10px;
+}
+

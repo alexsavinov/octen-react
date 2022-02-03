@@ -1,0 +1,23 @@
+.wrap {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.left, .right {
+    width: 500px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.left {
+    background-color: snow;
+    border-radius: 5px;
+}
+
+h3 {
+    padding: 15px 10px 15px;
+}
