@@ -20,7 +20,7 @@ export const createCar = createAsyncThunk(
             const data = await carService.create(newCar);
             dispatch(addCar({data}));
         } catch (e) {
-
+            console.log(e);
         }
     }
 )
@@ -32,7 +32,7 @@ export const updateCarById = createAsyncThunk(
             const newCar = await carService.updateById(id, car);
             dispatch(updateCar({car: newCar}));
         } catch (e) {
-
+            console.log(e);
         }
     }
 )
@@ -44,7 +44,7 @@ export const deleteCarById = createAsyncThunk(
             await carService.deleteById(id);
             dispatch(deleteCar({id}))
         } catch (e) {
-
+            console.log(e);
         }
     }
 )

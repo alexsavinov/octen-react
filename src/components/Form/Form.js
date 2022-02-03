@@ -3,6 +3,8 @@ import {useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {useDispatch, useSelector} from "react-redux";
 
+import css from "./Form.module.css";
+
 import {createCar, updateCarById} from "../../store";
 import {CarValidator} from "../../validators/car.validator";
 
@@ -32,21 +34,27 @@ const Form = () => {
     }, [carForUpdate]);
 
     return (
-        <form onSubmit={handleSubmit(submit)}>
-            <div>
-                <label>Model: <input type="text" placeholder={'model'} {...register('model')}/></label>
-                {errors.model && <span>{errors.model.message}</span>}
-            </div>
-            <div>
-                <label>Price: <input type="text" placeholder={'price'} {...register('price')}/></label>
-                {errors.price && <span>{errors.price.message}</span>}
-            </div>
-            <div>
-                <label>Year: <input type="text" placeholder={'year'} {...register('year')}/></label>
-                {errors.year && <span>{errors.year.message}</span>}
-            </div>
-            <button>Save</button>
-        </form>
+        <div className={css.wrap}>
+            <form className={css.form} onSubmit={handleSubmit(submit)}>
+                <h3>Cars</h3>
+                <div className={css.input}>
+                    <label className={css.label}>Model:</label>
+                    <input type="text" placeholder={'model'} {...register('model')}/>
+                    {errors.model && <span>{errors.model.message}</span>}
+                </div>
+                <div className={css.input}>
+                    <label className={css.label}>Price:</label>
+                    <input type="text" placeholder={'price'} {...register('price')}/>
+                    {errors.price && <span>{errors.price.message}</span>}
+                </div>
+                <div className={css.input}>
+                    <label className={css.label}>Year:</label>
+                    <input type="text" placeholder={'year'} {...register('year')}/>
+                    {errors.year && <span>{errors.year.message}</span>}
+                </div>
+                <button>Save</button>
+            </form>
+        </div>
     );
 };
 

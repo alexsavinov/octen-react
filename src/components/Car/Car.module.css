@@ -1,0 +1,32 @@
+.car {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 5px;
+    gap: 20px;
+    width: 100%;
+    background-color: snow;
+    border-radius: 5px;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.title {
+    background-color: snow;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button {
+    height: 100%;
+}

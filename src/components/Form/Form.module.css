@@ -1,0 +1,34 @@
+body {
+    background-color: darkgray;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    background-color: snow;
+    gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    align-items: flex-start;
+}
+
+.input {
+    display: flex;
+}
+
+.label {
+    min-width: 60px;
+}
