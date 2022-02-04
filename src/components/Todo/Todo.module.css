@@ -1,0 +1,13 @@
+.Todo {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+button {
+    margin: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
