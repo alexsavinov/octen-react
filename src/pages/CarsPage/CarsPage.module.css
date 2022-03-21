@@ -15,15 +15,3 @@
 .left {
     border-radius: 5px;
 }
-
-h3 {
-    background-color: indigo;
-    padding: 15px 10px 15px;
-    border-radius: 5px;
-    color: snow;
-}
-
-button {
-    min-width: 120px;
-    min-height: 22px;
-}

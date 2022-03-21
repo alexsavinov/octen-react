@@ -1,10 +1,8 @@
-const baseUrl = 'https://jsonplaceholder.typicode.com';
+const baseUrl = 'http://localhost:8000';
 
 export default baseUrl;
 
 export const urls = {
-    albums: '/albums',
-    comments: '/comments',
-    posts: '/posts',
-    users: '/users'
+    cars: '/cars',
+    auto_park: '/auto_parks'
 };

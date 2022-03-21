@@ -1,32 +1,27 @@
 import {Routes, Route, Navigate} from 'react-router-dom';
 
 import {Layout} from "./components";
-import {
-    UsersPage,
-    PostsPage,
-    PostDetailsPage,
-    UserDetailsPage,
-    UserPostsPage,
-    PostsCommentsPage
-} from "./pages";
+import { Auto_parkDetailsPage, Auto_parkPage, CarsPage, CarDetailsPage} from "./pages";
 
 function App() {
     return (
         <Routes>
             <Route path={'/'} element={<Layout/>}>
-                <Route index element={<Navigate to={'users'}/>}/>
+                <Route index element={<Navigate to={'cars'}/>}/>
 
-                <Route path={'users'} element={<UsersPage/>}>
-                    <Route path={':id'} element={<UserDetailsPage/>}>
-                        <Route path={'posts'} element={<UserPostsPage/>}/>
-                    </Route>
+                <Route path={'cars'} element={<CarsPage/>}>
+                    <Route path={'details/:id'} element={<CarDetailsPage/>}/>
+                    <Route path={':autoParkId/details/:id'} element={<CarDetailsPage/>}/>
                 </Route>
 
-                <Route path={'posts'} element={<PostsPage/>}>
-                    <Route path={':id'} element={<PostDetailsPage/>}>
-                        <Route path={'comments'} element={<PostsCommentsPage/>}/>
-                    </Route>
+                <Route path={'cars/:autoParkId'} element={<CarsPage/>}/>
+
+                <Route path={'auto_parks'} element={<Auto_parkPage/>}>
+                    <Route path={':autoParkId'} element={<Auto_parkDetailsPage/>}/>
+                    <Route path={':autoParkId/delete'} element={<Auto_parkDetailsPage/>}/>
+                    <Route path={':autoParkId/car'} element={<Auto_parkDetailsPage/>}/>
                 </Route>
+
             </Route>
         </Routes>
     );
