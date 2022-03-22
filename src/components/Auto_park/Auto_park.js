@@ -11,7 +11,7 @@ const Auto_park = ({auto_park, deleteAutopark}) => {
     }
 
     return (
-        <div className={css.user}>
+        <div className={css.item}>
             <div>
                 [{id}] {name}
             </div>
@@ -19,7 +19,7 @@ const Auto_park = ({auto_park, deleteAutopark}) => {
                 <div>
                     <button onClick={deleteAutoparkAction}>Delete</button>
                     <Link to={id.toString()} state={{...auto_park}}>
-                        <button>Details</button>
+                        <button className={css.button}>Details</button>
                     </Link>
                 </div>
             </div>

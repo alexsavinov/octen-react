@@ -1,13 +1,12 @@
 import {useLocation} from 'react-router-dom';
-import {useEffect, useState} from "react";
+import {useEffect, useState} from 'react';
 
-import css from './Auto_parkDetails.module.css';
-import {auto_parkService} from "../../services";
+import {auto_parkService} from '../../services';
 
 const Auto_parkDetailsPage = () => {
     const {state: auto_park_param} = useLocation();
 
-    const [auto_park, setAuto_park] = useState([]);
+    const [auto_park, setAuto_park] = useState(null);
 
     useEffect(() => {
         auto_parkService.getById(auto_park_param?.id).then(value => setAuto_park(value))

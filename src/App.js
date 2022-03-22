@@ -1,7 +1,7 @@
 import {Routes, Route, Navigate} from 'react-router-dom';
 
-import {Layout} from "./components";
-import { Auto_parkDetailsPage, Auto_parkPage, CarsPage, CarDetailsPage} from "./pages";
+import {Layout} from './components';
+import {Auto_parkDetailsPage, Auto_parkPage, CarDetailsPage, CarsPage} from './pages';
 
 function App() {
     return (
@@ -11,10 +11,9 @@ function App() {
 
                 <Route path={'cars'} element={<CarsPage/>}>
                     <Route path={'details/:id'} element={<CarDetailsPage/>}/>
-                    <Route path={':autoParkId/details/:id'} element={<CarDetailsPage/>}/>
                 </Route>
 
-                <Route path={'cars/:autoParkId'} element={<CarsPage/>}/>
+                <Route path={'cars?autoParkId=:autoParkId'} element={<CarsPage/>}/>
 
                 <Route path={'auto_parks'} element={<Auto_parkPage/>}>
                     <Route path={':autoParkId'} element={<Auto_parkDetailsPage/>}/>

@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import css from './Car.module.css';
 
@@ -10,15 +10,18 @@ const Car = ({car, deleteCar}) => {
     }
 
     return (
-        <div className={css.user}>
+        <div className={css.item}>
             <div>
                 [{id}] {brand}
             </div>
             <div>
                 <button onClick={deleteCarAction}>Delete</button>
-                <Link to={'details/' + id.toString()} state={{...car}}>
-                    <button>Details</button>
-                </Link>
+
+                <NavLink
+                    to={'details/' + id.toString()}
+                    state={{...car}}>
+                    <button className={css.button}>Details</button>
+                </NavLink>
             </div>
         </div>
     );

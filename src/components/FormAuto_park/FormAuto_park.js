@@ -1,16 +1,21 @@
-import {useForm} from "react-hook-form";
+import {useForm} from 'react-hook-form';
+
+import css from './FormAuto_park.module.css';
 
 const FormAuto_park = ({createAutopark, errors}) => {
     const {register, handleSubmit} = useForm();
 
     return (
         <div>
-            <form onSubmit={handleSubmit(createAutopark)}>
-                <div style={{display: "flex", flexDirection: "column"}}>
-                    <label>Name: <input type="text" defaultValue={''} {...register('name')}/></label>
+            <form className={css.item} onSubmit={handleSubmit(createAutopark)}>
+                <div>
+                    <span>[ autopark ]</span>
+                    <label className={css.input}>
+                        Name: <input type='text' defaultValue={''} {...register('name')}/>
+                    </label>
                     {errors && errors.name && <div>{errors.name[0]}</div>}
                 </div>
-                <button>Save</button>
+                <button className={css.button}>Save</button>
             </form>
         </div>
     );
