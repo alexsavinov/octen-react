@@ -3,6 +3,8 @@ import {Routes, Route, Navigate} from 'react-router-dom';
 import {Layout} from './components';
 import {Auto_parkDetailsPage, Auto_parkPage, CarDetailsPage, CarsPage} from './pages';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
     return (
         <Routes>
