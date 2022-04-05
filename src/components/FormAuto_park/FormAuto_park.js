@@ -16,7 +16,7 @@ const FormAuto_park = ({createAutopark, errors}) => {
                     {errors && errors.name && <div>{errors.name[0]}</div>}
                 </div>
                 <button className={css.button}>Save</button>
-                {/*<button type="submit" className={'btn btn-outline-primary'}>Save</button>*/}
+                {/*<button type='submit' className={'btn btn-outline-primary'}>Save</button>*/}
             </form>
         </div>
     );

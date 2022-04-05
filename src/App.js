@@ -1,7 +1,7 @@
 import {Routes, Route, Navigate} from 'react-router-dom';
 
-import {Layout} from './components';
-import {Auto_parkDetailsPage, Auto_parkPage, CarDetailsPage, CarsPage} from './pages';
+import {Activate, Layout} from './components';
+import {AuthPage, Auto_parkDetailsPage, Auto_parkPage, CarDetailsPage, CarsPage} from './pages';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,6 +23,9 @@ function App() {
                     <Route path={':autoParkId/car'} element={<Auto_parkDetailsPage/>}/>
                 </Route>
 
+                <Route path={'/auth/:userId'} element={<AuthPage/>}/>
+
+                <Route path={'/activate/:activateToken'} element={<Activate/>}/>
             </Route>
         </Routes>
     );

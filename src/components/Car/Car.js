@@ -15,7 +15,7 @@ const Car = ({car, deleteCar}) => {
                 [{id}] {brand}
             </div>
             <div>
-                <button onClick={deleteCarAction}>Delete</button>
+                {/*<button onClick={deleteCarAction}>Delete</button>*/}
 
                 <NavLink
                     to={'details/' + id.toString()}

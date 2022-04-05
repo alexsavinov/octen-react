@@ -1,3 +1,5 @@
+export * from './Activate/Activate';
+export * from './Auth/Auth';
 export * from './Auto_park/Auto_park';
 export * from './Car/Car';
 export * from './FormAuto_park/FormAuto_park';
