@@ -17,9 +17,7 @@ const Auto_parkPage = () => {
     const createAutopark = (data) => {
         auto_parkService.create(data)
             .then(value => setAuto_park([...auto_park, value]))
-            .catch(error => {
-                setFormError(error.response.data)
-            });
+            .catch(error => { setFormError(error.response.data) });
     }
 
     const deleteAutopark = (id) => {
