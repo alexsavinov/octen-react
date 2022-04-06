@@ -3,7 +3,7 @@ import {urls} from '../config/urls';
 
 
 export const auto_parkService = {
-    getAll: () => axiosService.get(urls.auto_park).then(value => value.data),
+    getAll: (page = 1) => axiosService.get(`${urls.auto_park}?page=${page}`).then(value => value.data),
     getById: (id) => axiosService.get(`${urls.auto_park}/${id}`).then(value => value.data),
     deleteById: (id) => axiosService.delete(`${urls.auto_park}/${id}`,
         {

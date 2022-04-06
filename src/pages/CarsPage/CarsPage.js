@@ -3,28 +3,36 @@ import {NavLink, Outlet, useSearchParams} from 'react-router-dom';
 
 import css from './CarsPage.module.css';
 
-import {Car, FormCar} from '../../components';
+import {Car, FormCar, Paginator} from '../../components';
 import {carService, auto_parkService} from '../../services';
 
 const CarsPage = () => {
     const [cars, setCars] = useState([]);
     const [auto_park, setAuto_park] = useState([]);
     const [formError, setFormError] = useState(null);
+    const [paginator, setPaginator] = useState({});
+    const [currentPage, setCurrentPage] = useState(1);
 
     const [searchParams] = useSearchParams();
     let autoParkId = searchParams.get('autoParkId');
 
     useEffect(() => {
         if (!autoParkId) {
-            carService.getAll().then(value => setCars([...value]))
+            carService.getAll(currentPage).then(value => {
+                setCars([...value.data],);
+                setPaginator(value);
+            })
         } else {
-            carService.getByParkId(autoParkId).then(value => setCars([...value]));
+            carService.getByParkId(autoParkId, currentPage).then(value => setCars([...value.data]));
         }
-    }, [autoParkId]);
+    }, [autoParkId, currentPage]);
 
     useEffect(() => {
-        auto_parkService.getAll().then(value => setAuto_park([...value]))
-    }, []);
+        auto_parkService.getAll().then(value => {
+            setAuto_park([...value.data]);
+            setPaginator(value);
+        })
+    }, [currentPage]);
 
     const createCar = (data) => {
         if (autoParkId) {
@@ -71,6 +79,7 @@ const CarsPage = () => {
                 </ul>
 
                 {cars.map(car => <Car key={car.id} car={{...car}} deleteCar={deleteCar} autoParkId={autoParkId}/>)}
+                <Paginator param={{...paginator, data: null}} setCurrentPage={setCurrentPage}/>
             </div>
 
             <div className={css.right}>

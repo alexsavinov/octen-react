@@ -6,3 +6,4 @@ export * from './FormAuto_park/FormAuto_park';
 export * from './FormCar/FormCar';
 export * from './Header/Header';
 export * from './Layout/Layout';
+export * from './Paginator/Paginator';
