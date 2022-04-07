@@ -42,23 +42,26 @@ const Auth = () => {
                 setShowAlert(true);
             });
         } else { // Register
-            let user = {
-                ...e,
-                profile: {
-                    name: e.name,
-                    surname: e.surname,
-                    born: e.born,
-                    phone: e.phone
+            if (e.password !== e.password2) {
+                console.log('Passwords must contain equal values');
+            } else {
+                let user = {
+                    ...e,
+                    profile: {
+                        name: e.name,
+                        surname: e.surname,
+                        born: e.born,
+                        phone: e.phone
+                    }
                 }
+
+                authService.createUser(user).then(value => {
+                    setUser(value);
+                    setShowRegSuccess(true);
+                }).catch(err => {
+                    console.log('err', err);
+                });
             }
-
-            authService.createUser(user).then(value => {
-                setUser(value);
-                setShowRegSuccess(true);
-
-            }).catch(err => {
-                console.log('err', err);
-            });
         }
     }
 
