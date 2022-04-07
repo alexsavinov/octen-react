@@ -1,10 +1,11 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {Alert, Button, Form, Modal, Nav, NavLink} from 'react-bootstrap';
 import {PersonCircle, BoxArrowInRight} from 'react-bootstrap-icons';
 import {useForm} from 'react-hook-form';
 import {Link} from 'react-router-dom';
 
 import {authService} from '../../services';
+import {Auto_park} from "../Auto_park/Auto_park";
 
 const Auth = () => {
     const {reset, register, handleSubmit} = useForm();
@@ -12,11 +13,11 @@ const Auth = () => {
     const [isAuth, setIsAuth] = useState(true);
     const [showAuth, setShowAuth] = useState(false);
     const [showRegSuccess, setShowRegSuccess] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
+    const [error, setError] = useState(false);
 
     const handleSelect = (eventKey) => {
         setIsAuth(eventKey === 'link-0');
-        setShowAlert(false);
+        // setShowAlert(false);
     }
 
     const handleClose = () => setShowAuth(false);
@@ -28,37 +29,45 @@ const Auth = () => {
     }
     const authUser = (e) => {
         if (isAuth) { // Login
+
             authService.auth(e).then(value => {
                 localStorage.setItem('access_token', value.access);
                 localStorage.setItem('refresh_token', value.refresh);
                 setUser({id: value.id, email: e.email});
                 localStorage.setItem('user', JSON.stringify({id: value.id, email: e.email}));
                 setShowAuth(false);
-                setShowAlert(false);
+                // setShowAlert(false);
 
             }).catch(err => {
                 setUser(null);
                 setShowAuth(true);
-                setShowAlert(true);
+                // setShowAlert(true);
+                setError(err);
+                // console.log(err);
             });
+
         } else { // Register
-            let user = {
-                ...e,
-                profile: {
-                    name: e.name,
-                    surname: e.surname,
-                    born: e.born,
-                    phone: e.phone
+            if (e.password !== e.password2) {
+                console.log('Passwords must contain equal values');
+            } else {
+                let user = {
+                    ...e,
+                    profile: {
+                        name: e.name,
+                        surname: e.surname,
+                        born: e.born,
+                        phone: e.phone
+                    }
                 }
+
+                authService.createUser(user).then(value => {
+                    setUser(value);
+                    setShowRegSuccess(true);
+                }).catch(err => {
+                    setError(err.response.data);
+                    console.log('err', err.response.data);
+                });
             }
-
-            authService.createUser(user).then(value => {
-                setUser(value);
-                setShowRegSuccess(true);
-
-            }).catch(err => {
-                console.log('err', err);
-            });
         }
     }
 
@@ -162,10 +171,11 @@ const Auth = () => {
                             <div className={'text-success'}>Registration email sent!</div>
                         }
 
-                        {showAlert && <Alert variant='danger' onClose={() => setShowAlert(false)} dismissible>
-                            <Alert.Heading>Incorrect email or password!</Alert.Heading>
+                        {error && <Alert variant='danger' onClose={() => setError(false)} dismissible>
+                            <Alert.Heading>Error!</Alert.Heading>
                             <p>
-                                Change email or password and try again.
+                                {/*{JSON.stringify(error)}*/}
+                                {error}
                             </p>
                         </Alert>}
 
